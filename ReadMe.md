@@ -1,4 +1,4 @@
-# Japanese Sentiment Analysis
+# Japanese Sentiment Analysis API using Huggingface model
 
 ## Introduction
 
