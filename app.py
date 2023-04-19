@@ -12,7 +12,6 @@ app = Flask(__name__)
 # Define the endpoint for sentiment analysis
 """
 Analysis sentiments from a given Japanese text.
-
 :return The label:0 corresponds to a negative sentiment, while the label:1 corresponds to a positive sentiment. In the score array, the first element represents the negative degree, while the second element represents the positive degree.  
 """
 @app.route('/sentiment-analysis', methods=['POST'])
