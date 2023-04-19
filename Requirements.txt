@@ -1,0 +1,6 @@
+flask
+transformers
+sentencepiece
+fugashi
+unidic_lite
+torch
