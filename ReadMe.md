@@ -2,8 +2,9 @@
 
 ## Introduction
 
-This repo demonstrates simple Japanese sentiment analysis by using Huggingface model; https://huggingface.co/jarvisx17/japanese-sentiment-analysis
-It wraps model to Flask api server. The server returns results as Positive and Negative from 0 to 1 independently.
+This repo demonstrates an API server that serves Japanese sentiment analysis by using Huggingface model, https://huggingface.co/jarvisx17/japanese-sentiment-analysis
+
+The server returns Positive and Negative values from 0 to 1 individually.
 
 ## Request
 ```json
@@ -12,14 +13,13 @@ It wraps model to Flask api server. The server returns results as Positive and N
 }
 ```
 
-`curl` example is as below;
+The `curl` example is as below;
 ```shell
 curl --location --request POST '127.0.0.1:5000/sentiment-analysis' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 "text":"日本語のテキストを解析したいです。"
 }'
-
 ```
 
 ## Response
@@ -33,5 +33,5 @@ curl --location --request POST '127.0.0.1:5000/sentiment-analysis' \
 }
 ```
 
-The first one shows **Negative** degree from 0 to 1, and the last one gives **Positive** degree. Remember, the first one means a degree of Negative in this model.
-The label `0` means it's Negative, `1` means Positive. But I recommend to find adequate output with given degrees.
+The first one displays the **Negative** degree from 0 to 1, while the last one indicates **Positive** degree. Please note that the first element indicates the **Negative** in this model.
+The label `0` indicates a negative sentiment, while `1` indicates a positive sentiment. However, it is recommended to interpret the output based on the degrees provided.
